@@ -1,4 +1,3 @@
-# main.py - Example Bot Code
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os
@@ -13,7 +12,6 @@ async def download_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not link:
         await update.message.reply_text("Please provide a TeraBox link!")
         return
-    # Here simple placeholder message
     await update.message.reply_text(f"Downloading from: {link} (Demo)")
 
 if __name__ == "__main__":
